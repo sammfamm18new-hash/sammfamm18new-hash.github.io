@@ -2,27 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Advanced Salah Tracker</title>
+    <title>Ultimate Salah Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Advanced Salah Tracker</h1>
+    <h1>Ultimate Salah Tracker</h1>
 
     <div id="prayer-log">
-        <button data-prayer="Fajr">Fajr</button>
-        <button data-prayer="Dhuhr">Dhuhr</button>
-        <button data-prayer="Asr">Asr</button>
-        <button data-prayer="Maghrib">Maghrib</button>
-        <button data-prayer="Isha">Isha</button>
+        <h2>Fard Prayers</h2>
+        <div class="prayer-group">
+            <button data-prayer="Fajr">Fajr (2 rak’ah)</button>
+            <button data-prayer="Dhuhr">Dhuhr (4 rak’ah)</button>
+            <button data-prayer="Asr">Asr (4 rak’ah)</button>
+            <button data-prayer="Maghrib">Maghrib (3 rak’ah)</button>
+            <button data-prayer="Isha">Isha (4 rak’ah)</button>
+        </div>
+
+        <h2>Sunnah & Extra</h2>
+        <div class="prayer-group">
+            <button data-prayer="FajrSunnah">Fajr Sunnah (2 rak’ah)</button>
+            <button data-prayer="BeforeDhuhr">Before Dhuhr Sunnah (2 rak’ah)</button>
+            <button data-prayer="AfterDhuhr">After Dhuhr Sunnah (2 rak’ah)</button>
+            <button data-prayer="MaghribSunnah">Maghrib Sunnah (2 rak’ah)</button>
+            <button data-prayer="IshaSunnah">Isha Sunnah (2 rak’ah)</button>
+            <button data-prayer="Dhuha">Dhuha (4 rak’ah)</button>
+            <button data-prayer="Tahajud">Tahajud (4 rak’ah)</button>
+            <button data-prayer="Witr">Witr (3 rak’ah)</button>
+        </div>
     </div>
 
     <div id="stats">
         <h2>Stats</h2>
-        <p>Today's Completion: <span id="todayCount">0</span>/5</p>
+        <p>Today's Completion: <span id="todayCount">0</span>/<span id="totalCount">13</span></p>
         <p>Current Streak: <span id="streak">0</span></p>
     </div>
 
+    <canvas id="weeklyChart" width="400" height="200"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
